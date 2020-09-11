@@ -33,13 +33,22 @@
   end
 
   arr = array_of_arrays
+  count = 0
   arr.each do |array|
-    puts "Input: "
+    puts 'Input: '
     p array
-    puts "Output: "
-    p merge_sort(array)
+    puts 'Output (merge sorted): '
+    merged = p merge_sort(array)
+    puts "Sorted With Built In \"sort\" method: "
+    sorted = p array.sort
+    puts 'Are arrays equal?'
+    merged == sorted ? (puts 'True'; count += 1) : (puts 'False')
     puts ""
   end
+  puts ""
+  puts "#{count} out of #{arr.length} arrays were succesfully sorted"
 
-  
+
+
+
     
